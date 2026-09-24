@@ -6,7 +6,15 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-
+    <div id="menu-container"></div>      
+        <script>
+            fetch('index.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('menu-container').innerHTML = data;
+            })
+            .catch(error => console.error('Lỗi khi tải menu:', error));
+        </script>
     <div class="header-nav">
         <img src="../images/MWSLogo.gif" alt="Maxwell Scientific" style="max-width: 400px;">
         <br><br>
@@ -65,6 +73,6 @@
         205 East Nordheim Drive, Hapton, IL 43129<br>
         Phone: (800) 555-2191 Fax: (812) 555-2192
     </address>
-
+    <div style="clear: both;"></div>
 </body>
 </html>
