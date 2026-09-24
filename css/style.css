@@ -1,0 +1,72 @@
+BODY {
+    color: green;
+    background: white url('Draft.jpg') no-repeat fixed center center;
+}
+
+H1, H2, H3, H4, H5, H6 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ADDRESS {
+    font-size: 0.9em;
+    font-style: normal;
+    text-align: center;
+    text-transform: uppercase;
+    clear: both; 
+    padding-top: 20px;
+}
+
+BLOCKQUOTE {
+    background-color: silver;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+UL {
+    list-style: circle url('../images/Apple.jpg') outside;
+}
+
+UL B {
+    color: rgb(155,0,0);
+}
+
+A {
+    font-size: 0.9em;
+    color: green; 
+    text-decoration: underline;
+}
+
+A:hover {
+    color: red;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.Special {
+    color: rgb(153,102,6);
+    font-weight: bold;
+}
+
+DIV.Article {
+    padding: 0.5em;
+    border-style: solid;
+    border-width: 2px;
+    background-color: rgb(252,221,163);
+    width: 250px;
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.header-nav {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.header-nav a {
+    margin: 0 10px;
+}
+.article-img {
+    float: right;
+    width: 80px;
+    margin: 0 0 5px 5px;
+}
