@@ -8,7 +8,7 @@
 <body>
     <div id="menu-container"></div>      
         <script>
-            fetch('index.html')
+            fetch('../index.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('menu-container').innerHTML = data;
