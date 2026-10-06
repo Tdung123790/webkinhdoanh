@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Maxwell Scientific - Astronomy</title>
-    <link rel="stylesheet" href="../css/style.css">
-</head>
+    <link rel="stylesheet" type="text/css" href="../css/main.css" />
+    
+    <link rel="stylesheet" type="text/css" href="../css/style.css" /></head>
 <body>
     <div id="menu-container"></div>      
         <script>
-            fetch('../index.html')
+            fetch('../menu.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('menu-container').innerHTML = data;

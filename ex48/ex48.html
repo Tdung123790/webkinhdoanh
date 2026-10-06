@@ -1,0 +1,134 @@
+<html>
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="../css/main.css" />
+    
+    <link rel="stylesheet" type="text/css" href="../css/ex48.css" />
+</head>
+<body>
+    <div id="menu-container"></div>      
+        <script>
+            fetch('../menu.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('menu-container').innerHTML = data;
+            })
+            .catch(error => console.error('Lỗi khi tải menu:', error));
+        </script>
+    <div class="logo-container">
+        <img src="../images/Jackson.gif" alt="Jackson Electronics Logo">
+    </div>
+
+    <h2>Registration Form</h2>
+    <div class="subtitle">Register your Jackson Electronics product here</div>
+    <form name="frmRegister">
+        <table align="center" border="0" cellpadding="2" cellspacing="2">
+            <tr>
+                <td class="lbl">First Name:</td>
+                <td>
+                    <input type="text" name="txtFirstName" size="14">
+                    Last Name:
+                    <input type="text" name="txtLastName" size="14">
+                </td>
+            </tr>
+            <tr>
+                <td class="lbl">Address #1:</td>
+                <td><input type="text" name="txtAddress1" size="38"></td>
+            </tr>
+            <tr>
+                <td class="lbl">Address #2:</td>
+                <td><input type="text" name="txtAddress2" size="38"></td>
+            </tr>
+            <tr>
+                <td class="lbl">City:</td>
+                <td>
+                    <input type="text" name="txtCity" size="16">
+                    State:
+                    <input type="text" name="txtState" size="3">
+                    Zip:
+                    <input type="text" name="txtZip" size="6">
+                </td>
+            </tr>
+            <tr>
+                <td class="lbl">Country:</td>
+                <td><input type="text" name="txtCountry" value="United States" size="24"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><hr color="#7aa0c2"></td>
+            </tr>
+            <tr>
+                <td class="lbl">Product:</td>
+                <td>
+                    <select name="cboProduct">
+                        <option value="ScanMaster" selected>ScanMaster</option>
+                        <option value="LaserJet">LaserJet</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="lbl">Date Purchased:</td>
+                <td><input type="text" name="txtDatePurchased" size="25"></td>
+            </tr>
+            <tr>
+                <td class="lbl">Serial #:</td>
+                <td><input type="text" name="txtSerial" size="25"></td>
+            </tr>
+            <tr>
+                <td class="lbl" valign="top">Used for:</td>
+                <td>
+                    <table border="0" cellpadding="0" cellspacing="2">
+                        <tr>
+                            <td><input type="radio" name="radUsedFor" value="Home"> Home</td>
+                            <td><input type="radio" name="radUsedFor" value="Educational Institution"> Educational Institution</td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" name="radUsedFor" value="Business" checked> Business</td>
+                            <td><input type="radio" name="radUsedFor" value="Other"> Other</td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" name="radUsedFor" value="Government"> Government</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="lbl" valign="top">System (check all that apply):</td>
+                <td>
+                    <table border="0" cellpadding="0" cellspacing="2">
+                        <tr>
+                            <td width="130"><input type="checkbox" name="chkSystem" value="Windows"> Windows</td>
+                            <td><input type="checkbox" name="chkSystem" value="UNIX"> UNIX</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="chkSystem" value="Macintosh"> Macintosh</td>
+                            <td><input type="checkbox" name="chkSystem" value="Other"> Other</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2"><hr color="#7aa0c2"></td>
+            </tr>
+
+            <tr>
+                <td class="lbl" valign="top">Comments?:</td>
+                <td>
+                    <textarea name="txtComments" rows="6" cols="45"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" class="center-btn">
+                    <input type="button" value="Click to register" onclick="alert('Đăng ký');">
+                    <input type="reset" value="Click to cancel">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <div style="clear: both;"></div>
+
+</body>
+</html>
