@@ -1,0 +1,63 @@
+body {
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.expense-container {
+    border: 2px solid #0000ff;
+    background-color: #ccffff; 
+    width: 800px;
+    margin: 20px auto; 
+    padding: 20px 30px;
+    font-family: "Times New Roman", Times, serif; 
+}
+
+.logo-box {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.expense-container h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.expense-container hr {
+    border: none;
+    border-top: 1px solid #777;
+    margin-bottom: 25px;
+}
+
+.question-block {
+    margin-bottom: 18px;
+    font-size: 16px;
+}
+
+.expense-table {
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: #e0f8f8;
+}
+
+.expense-table th {
+    background-color: #cceeee;
+    font-weight: bold;
+}
+
+.expense-table th, .expense-table td {
+    padding: 4px;
+}
+
+.btn-group {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-text {
+    font-size: 15px;
+    margin-top: 10px;
+}

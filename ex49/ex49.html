@@ -1,0 +1,97 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Online Classifieds Search Form</title>
+    <link rel="stylesheet" type="text/css" href="../css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../css/ex49.css" />
+</head>
+<body>
+
+    <div id="menu-container"></div>
+    <script>
+        fetch('../menu.html') 
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('menu-container').innerHTML = data;
+            })
+            .catch(error => console.error('Lỗi khi tải menu:', error));
+    </script>
+
+    <div class="classified-container">
+        <h2 class="classified-title">Online Classifieds Search Form</h2>
+        <hr>
+
+        <form id="frmClassified">
+            
+            <p><b>1) Search for a classified in the following sections:</b></p>
+            <table border="0" cellpadding="2" cellspacing="5">
+                <tr>
+                    <td width="150"><input type="radio" name="radSection" value="Employment"> Employment</td>
+                    <td><input type="radio" name="radSection" value="Personal"> Personal</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="radSection" value="For Sale" checked> For Sale</td>
+                    <td><input type="radio" name="radSection" value="Miscellaneous"> Miscellaneous</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="radSection" value="Housing"> Housing</td>
+                    <td><input type="radio" name="radSection" value="All of the above"> All of the above</td>
+                </tr>
+            </table>
+
+            <p><b>2) Search the following publications:</b></p>
+            <table border="0" cellpadding="2" cellspacing="5">
+                <tr>
+                    <td width="220"><input type="checkbox" name="chkPub" value="Midwest times" checked> Midwest times</td>
+                    <td width="180"><input type="checkbox" name="chkPub" value="Modern News"> Modern News</td>
+                    <td><input type="checkbox" name="chkPub" value="Employment Today"> Employment Today</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="chkPub" value="Great Lakes Classifieds" checked> Great Lakes Classifieds</td>
+                    <td><input type="checkbox" name="chkPub" value="Middleton Daily"> Middleton Daily</td>
+                    <td><input type="checkbox" name="chkPub" value="Cashtown Daily News"> Cashtown Daily News</td>
+                </tr>
+            </table>
+
+            <p><b>3) From to </b>
+               <input type="text" name="txtFromDate" value="mm/dd/yy" size="18" class="txt-input">
+               <b> to </b>
+               <input type="text" name="txtToDate" value="mm/dd/yy" size="18" class="txt-input">.
+            </p>
+
+            <p><b>4) Enter a few keywords to describe the classified.</b></p>
+            <input type="text" name="txtKeywords" style="width: 100%;" class="txt-input">
+
+            <p><b>5) Click one of the options below:</b></p>
+            
+            <table border="0" cellpadding="10" cellspacing="0">
+                <tr>
+                    <td align="center">
+                        <a href="javascript:void(0);" onclick="alert('Giả lập Search thành công!');" class="action-btn">
+                            <img src="../images/Search.gif" alt="Search" width="30"><br>
+                            <span style="color: #009933; font-weight: bold;">Search</span>
+                        </a>
+                    </td>
+                    
+                    <td align="center" width="80">
+                        <a href="help.html" target="_blank" class="action-btn">
+                            <img src="../images/Help.gif" alt="Help" width="30"><br>
+                            <span style="color: #0000cc; font-weight: bold;">Help</span>
+                        </a>
+                    </td>
+                    
+                    <td align="center">
+                        <a href="javascript:void(0);" onclick="document.getElementById('frmClassified').reset();" class="action-btn">
+                            <img src="../images/Cancel.gif" alt="Cancel" width="30"><br>
+                            <span style="color: #ff0066; font-weight: bold;">Cancel</span>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+
+        </form>
+    </div>
+    <div style="clear: both;"></div>
+
+</body>
+</html>

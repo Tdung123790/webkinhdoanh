@@ -1,0 +1,49 @@
+.classified-container {
+    border: 2px solid #0000ff; 
+    background-color: #d4f8f8; 
+    width: 750px;              
+    margin: 20px auto;     
+    padding: 20px 30px;
+    font-family: "Times New Roman", Times, serif; 
+}
+
+.classified-title {
+    color: red;
+    font-size: 26px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+
+.classified-container hr {
+    border: none;
+    border-top: 1px solid #777;
+    margin-bottom: 20px;
+}
+
+.classified-container p {
+    font-size: 18px;
+    margin: 15px 0 5px 0;
+}
+
+.classified-container td {
+    font-size: 16px;
+}
+
+.txt-input {
+    border: 1px solid #999;
+    padding: 2px 5px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.action-btn {
+    text-decoration: none;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.action-btn img {
+    border: none;
+    margin-bottom: 5px;
+}

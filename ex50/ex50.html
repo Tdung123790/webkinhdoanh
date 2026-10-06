@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Travel Expense Report</title>
+    <link rel="stylesheet" type="text/css" href="../css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../css/ex50.css" />
+</head>
+<body>
+    <div id="menu-container"></div>
+    <script>
+        fetch('../menu.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('menu-container').innerHTML = data;
+            })
+            .catch(error => console.error('Lỗi khi tải menu:', error));
+    </script>
+
+    <div class="expense-container">
+        <div class="logo-box">
+            <img src="../images/DeLong.jpg" alt="DeLong Enterprises">
+        </div>
+
+        <h2>Travel Expense Report</h2>
+        <hr>
+
+        <form id="frmExpense" onsubmit="alert('Thông báo submit: Đã gửi báo cáo chi phí thành công!'); return false;">
+            <div class="question-block">
+                1) First Name: <input type="text" name="txtFirstName" size="18">
+                &nbsp;&nbsp;
+                Last Name: <input type="text" name="txtLastName" size="18">
+            </div>
+            <div class="question-block">
+                2) Social Security Number: <input type="text" name="txtSSN" size="12">
+            </div>
+
+            <div class="question-block">
+                3) Department: 
+                <select name="cboDepartment">
+                    <option value="Accounting">Accounting</option>
+                    <option value="IT">IT</option>
+                    <option value="HR">Human Resources</option>
+                </select>
+            </div>
+
+            <div class="question-block">
+                4) Describe the purpose of your trip.<br>
+                <textarea name="txtPurpose" rows="4" cols="65" style="margin-top: 5px;"></textarea>
+            </div>
+
+            <div class="question-block">
+                5) Itemize your travel expenses
+                <table class="expense-table" border="1" bordercolor="#999999" cellspacing="0" cellpadding="4">
+                    <tr>
+                        <th width="90">Date</th>
+                        <th width="280">Description</th>
+                        <th width="100">Category</th>
+                        <th width="70">Amount</th>
+                    </tr>
+                    <tr>
+                        <td align="center"><input type="text" name="txtDate1" value="mm/dd/yy" size="10"></td>
+                        <td align="center"><input type="text" name="txtDesc1" size="35"></td>
+                        <td align="center">
+                            <select name="cboCat1">
+                                <option value="Meal">Meal</option>
+                                <option value="Hotel">Hotel</option>
+                                <option value="Flight">Flight</option>
+                            </select>
+                        </td>
+                        <td align="center"><input type="text" name="txtAmt1" size="8"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"><input type="text" name="txtDate2" value="mm/dd/yy" size="10"></td>
+                        <td align="center"><input type="text" name="txtDesc2" size="35"></td>
+                        <td align="center">
+                            <select name="cboCat2">
+                                <option value="Meal">Meal</option>
+                            </select>
+                        </td>
+                        <td align="center"><input type="text" name="txtAmt2" size="8"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"><input type="text" name="txtDate3" value="mm/dd/yy" size="10"></td>
+                        <td align="center"><input type="text" name="txtDesc3" size="35"></td>
+                        <td align="center">
+                            <select name="cboCat3">
+                                <option value="Meal">Meal</option>
+                            </select>
+                        </td>
+                        <td align="center"><input type="text" name="txtAmt3" size="8"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"><input type="text" name="txtDate4" value="mm/dd/yy" size="10"></td>
+                        <td align="center"><input type="text" name="txtDesc4" size="35"></td>
+                        <td align="center">
+                            <select name="cboCat4">
+                                <option value="Meal">Meal</option>
+                            </select>
+                        </td>
+                        <td align="center"><input type="text" name="txtAmt4" size="8"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="question-block">
+                6) Have you submitted your receipts? 
+                <input type="radio" name="radReceipt" value="Yes"> Yes 
+                <input type="radio" name="radReceipt" value="No"> 
+            </div>
+            <div class="btn-group">
+                <input type="submit" value="Submit travel expenses">
+                <input type="reset" value="Reset">
+            </div>
+            <div class="footer-text">
+                Questions? Contact Debbie Larson in Accounting (ext. 2150).
+            </div>
+
+        </form>
+    </div>
+    <div style="clear: both;"></div>
+</body>
+</html>
