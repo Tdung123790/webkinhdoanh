@@ -1,51 +1,36 @@
 <html>
     <head>
-        <title></title>
+        <title>Xem CCCD</title>
+
         <style>
-            @import url("main.css");
+            @import url("./css/xam.css");
         </style>
-        <script src="ptb2.js"></script>
+
+        <script src="./lib/ptb12.js"></script>
+
         <script>
-            function giaiptb2() {
-                var a = parseFloat(document.getElementById("txtA").value);
-                var b = parseFloat(document.getElementById("txtB").value);
-                var c = parseFloat(document.getElementById("txtC").value);
-                alert("a = " + a + ", b = " + b + ", c = " + c);
-                var nghiem = giaiptb2(a, b, c);
-                alert("Nghiem = " + nghiem);
-                document.getElementById("txtNghiem").innerHTML = nghiem;
+            function xemCCCD() {
+                var thongTin = layThongTinCCCD();
+
+                var img = document.getElementById("imgCCCD");
+                img.src = thongTin.src;
+                img.style.display = "inline-block"; 
+
+                document.getElementById("btnToggle").innerHTML = thongTin.btnText;
             }
         </script>
     </head>
     <body>
-        <h1 id="idh1"> Lop K24416 + K24406</h1>
-        <button onclick="javascript:idh1.style='background-color:yellow; color:blue; font-size:30px;'">
-            Doi nen vang
+
+        <h2>THONG TIN CAN CUOC CONG DAN</h2>
+
+        <button id="btnToggle" onclick="xemCCCD()">
+            Xem CCCD
         </button>
-        <table border="1" width="100%">
-            <caption>ptrinhb2</caption>
-                <tr>
-                    <td>he so a</td>
-                    <td><input type="text" id="txtA"></td>
-                </tr>
-                <tr>
-                    <td>he so b</td>
-                    <td><input type="text" id="txtB"></td>
-                </tr>
-                <tr>
-                    <td>he so c</td>
-                    <td><input type="text" id="txtC"></td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <button onclick="giaiptb2()">Giai phuong trinh</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Nghiem</td>
-                    <td id="txtNghiem"></td>
-                </tr>
-            </table>
-        </table>
+
+        <br>
+
+        <img id="imgCCCD" src="" alt="Anh CCCD">
+
     </body>
 </html>
