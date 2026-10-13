@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 15px;
+    background-color: #ffffff;
+}
+
+.dynamic-container {
+    border: 2px solid #000000;
+    width: 620px;
+    padding: 15px 20px;
+    box-sizing: border-box;
+}
+
+#clockDisplay {
+    font-size: 22px;
+    font-family: "Times New Roman", Times, serif;
+    margin-bottom: 15px;
+}
+
+#mouseArea {
+    font-size: 16px;
+    font-family: "Times New Roman", Times, serif;
+    margin-bottom: 18px;
+    cursor: pointer;
+    user-select: none;
+}
+
+#tblData {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#tblData td {
+    padding: 5px 8px;
+    font-size: 15px;
+    font-family: "Times New Roman", Times, serif;
+    cursor: pointer;
+}
+
+.btn-group input {
+    padding: 3px 8px;
+    margin-right: 4px;
+    font-size: 13px;
+    cursor: pointer;
+}

@@ -1,0 +1,55 @@
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <title>Dynamic Table</title>
+    <link rel="stylesheet" type="text/css" href="../css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../css/ex64.css" />
+    <script src="../lib/ex64.js"></script>
+</head>
+<body>
+
+    <div id="menu-container"></div>
+    <script>
+        fetch('../menu.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('menu-container').innerHTML = data;
+            })
+            .catch(error => console.error('Lỗi khi tải menu:', error));
+    </script>
+
+    <div class="dynamic-container">
+        <div id="clockDisplay">00:00:00</div>
+
+        <div id="mouseArea" 
+            onmousedown="kiemTraNutChuot(event)" 
+            oncontextmenu="return false;">
+            Click chuột vào dòng này. Sẽ xuất hiện thông báo phím bấm của chuột
+        </div>
+
+        <table id="tblData" border="1" rules="all">
+            <tr>
+                <td>Dòng 1 cột 1</td>
+                <td>Dòng 1 cột 2</td>
+            </tr>
+            <tr>
+                <td>Dòng 2 cột 1</td>
+                <td>Dòng 2 cột 2</td>
+            </tr>
+            <tr>
+                <td>Dòng 3 cột 1</td>
+                <td>Dòng 3 cột 2</td>
+            </tr>
+        </table>
+
+        <div class="btn-group">
+            <input type="button" value="Thêm vào" onclick="themDong()">
+            <input type="button" value="Xoá" onclick="xoaDongDaChon()">
+            <input type="button" value="Chỉ hiện dòng" onclick="chiHienThiDong()">
+            <input type="button" value="Chỉ hiện cột" onclick="chiHienThiCot()">
+            <input type="button" value="Mở một trang mới" onclick="moTrangMoi()">
+        </div>
+    </div>
+
+</body>
+</html>
