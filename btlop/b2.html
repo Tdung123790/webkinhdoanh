@@ -1,0 +1,111 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Add Product</title>
+    <script>
+        function addProduct() {
+            var id = document.getElementById("pro_id").value;
+            var name = document.getElementById("pro_name").value;
+            var quantity = document.getElementById("pro_quantity").value;
+            var price = document.getElementById("pro_price").value;
+
+            if (id == "" || name == "" || quantity == "" || price == "") {
+                alert("Vui lòng nhập đầy đủ thông tin sản phẩm!");
+                return;
+            }
+
+            var tbody = document.getElementById("productTableBody");
+
+            var tr = document.createElement("tr");
+
+            var tdId = document.createElement("td");
+            tdId.innerHTML = id;
+            tr.appendChild(tdId);
+
+            var tdName = document.createElement("td");
+            tdName.innerHTML = name;
+            tr.appendChild(tdName);
+
+            var tdQuantity = document.createElement("td");
+            tdQuantity.innerHTML = quantity;
+            tr.appendChild(tdQuantity);
+
+            var tdPrice = document.createElement("td");
+            tdPrice.innerHTML = price;
+            tr.appendChild(tdPrice);
+
+            tbody.appendChild(tr);
+
+            document.getElementById("pro_id").value = "";
+            document.getElementById("pro_name").value = "";
+            document.getElementById("pro_quantity").value = "";
+            document.getElementById("pro_price").value = "";
+            document.getElementById("pro_id").focus();
+        }
+    </script>
+</head>
+<body>
+
+    <table border="1">
+        <tr>
+            <td>Product id:</td>
+            <td>
+                <input type="text" id="pro_id">
+            </td>
+        </tr>
+        <tr>
+            <td>Name:</td>
+            <td>
+                <input type="text" id="pro_name">
+            </td>
+        </tr>
+        <tr>
+            <td>Quantity:</td>
+            <td>
+                <input type="text" id="pro_quantity">
+            </td>
+        </tr>
+        <tr>
+            <td>Price:</td>
+            <td>
+                <input type="text" id="pro_price">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button onclick="addProduct()">
+                    Add Product
+                </button>
+            </td>
+        </tr>
+    </table>
+
+    <br>
+
+    <table border="1" width="350">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody id="productTableBody" align="center">
+            <tr>
+                <td>1</td>
+                <td>Cola</td>
+                <td>15</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Pepsi</td>
+                <td>20</td>
+                <td>17</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

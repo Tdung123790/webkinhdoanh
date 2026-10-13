@@ -1,0 +1,122 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Đăng ký thành viên</title>
+    <link rel="stylesheet" type="text/css" href="../css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../css/ex63.css" />
+    <script src="../lib/ex63.js"></script>
+</head>
+<body>
+
+    <div id="menu-container"></div>
+    <script>
+        fetch('../menu.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('menu-container').innerHTML = data;
+            })
+            .catch(error => console.error('Lỗi khi tải menu:', error));
+    </script>
+
+    <div class="main-wrapper">
+        <h1>Đăng ký thành viên</h1>
+        <hr>
+
+        <form id="frmRegister">
+            <div class="row">
+                <span class="row-label">Tên(*)</span>
+                <input type="text" id="txtTen" size="28">
+            </div>
+
+            <div class="row">
+                <span class="row-label">Ngày sinh(*)</span>
+                Ngày: <select id="selNgay"></select>
+                &nbsp;Tháng: <select id="selThang"></select>
+                &nbsp;Năm: <select id="selNam"></select>
+            </div>
+
+            <div class="row">
+                <span class="row-label">Giới tính(*)</span>
+                <label><input type="radio" name="radGioiTinh" value="Nam" checked> Nam</label>
+                &nbsp;
+                <label><input type="radio" name="radGioiTinh" value="Nữ"> Nữ</label>
+            </div>
+
+            <div class="row">
+                <span class="row-label">Email(*)</span>
+                <input type="text" id="txtEmail" size="30">
+            </div>
+
+            <div class="row" style="margin-top: 10px;">
+                Sở thích của bạn:<br>
+                <label><input type="checkbox" name="chkSoThich" value="Mua sắm" checked> Mua sắm</label><br>
+                <label><input type="checkbox" name="chkSoThich" value="Du lịch" checked> Du lịch</label><br>
+                <label><input type="checkbox" name="chkSoThich" value="Tán gẫu" checked> Tán gẫu</label><br>
+                <label><input type="checkbox" name="chkSoThich" value="Đọc sách" checked> Đọc sách</label><br>
+                <label><input type="checkbox" name="chkSoThich" value="Nghe nhạc" checked> Nghe nhạc</label>
+            </div>
+
+            <div class="row" style="margin-top: 8px;">
+                Màu yêu thích của bạn:<br>
+                <label>
+                    <input type="radio" name="radMau" value="Màu xanh da trời" checked>
+                    <span class="color-tag c-blue">Màu xanh da trời</span>
+                </label><br>
+                <label>
+                    <input type="radio" name="radMau" value="Màu đỏ">
+                    <span class="color-tag c-red">Màu đỏ</span>
+                </label><br>
+                <label>
+                    <input type="radio" name="radMau" value="Màu vàng">
+                    <span class="color-tag c-yellow">Màu vàng</span>
+                </label><br>
+                <label>
+                    <input type="radio" name="radMau" value="Màu xanh xanh lá cây">
+                    <span class="color-tag c-green">Màu xanh xanh lá cây</span>
+                </label><br>
+                <label>
+                    <input type="radio" name="radMau" value="Màu xanh tím">
+                    <span class="color-tag c-purple">Màu xanh tím</span>
+                </label>
+            </div>
+
+            <div class="btn-container">
+                <input type="button" value="Đăng ký" onclick="xuLyDangKy()">
+                <input type="button" value="Tiếp" onclick="xuLyTiep()">
+            </div>
+        </form>
+
+        <table class="table-members" border="1">
+            <thead>
+                <tr>
+                    <th>Tên</th>
+                    <th>Email</th>
+                    <th>Giới tính</th>
+                    <th>Năm sinh</th>
+                    <th>Sở thích</th>
+                    <th>Màu yêu thích</th>
+                </tr>
+            </thead>
+            <tbody id="memberTableBody">
+                <tr>
+                    <td>Nguyễn Văn Bình</td>
+                    <td>binh@gmail.com</td>
+                    <td>Nam</td>
+                    <td>02/02/1990</td>
+                    <td>đọc sách</td>
+                    <td>Màu vàng</td>
+                </tr>
+                <tr>
+                    <td>Nguyễn Thị An</td>
+                    <td>nguyenthian@gmail.com</td>
+                    <td>Nữ</td>
+                    <td>01/01/1992</td>
+                    <td>Tán gẫu, đọc sách</td>
+                    <td>Màu đỏ</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
